@@ -4,27 +4,4 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
-
-  <context-param>
-    <param-name>usuario</param-name>
-    <param-value>admin</param-value>
-  </context-param>
-  <context-param>
-    <param-name>password</param-name>
-    <param-value>123456</param-value>
-  </context-param>
-  <context-param>
-    <param-name>sessionTimeout</param-name>
-    <param-value>5</param-value>
-  </context-param>
-
-  <error-page>
-    <error-code>500</error-code>
-    <location>/error500.jsp</location>
-  </error-page>
-  <error-page>
-    <error-code>404</error-code>
-    <location>/error404.jsp</location>
-  </error-page>
-
 </web-app>
