@@ -14,12 +14,14 @@
         </div>
 
         <!-- Login Form -->
-        <form>
-          <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
-          <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
+        <form action="/AplicativoWebTemplate/servlet-login" method="POST">
+          <input type="text" id="user" class="fadeIn second" name="user" placeholder="user">
+          <input type="text" id="password" class="fadeIn third" name="password" placeholder="password">
           <input type="submit" class="fadeIn fourth" value="Log In">
         </form>
-
+        <%if(request.getAttribute("error")!=null){%>
+            <p class="fadeIn fifth"><%=request.getAttribute("error")%></p>
+         <%}%>
         <!-- Remind Passowrd -->
         <div id="formFooter">
           <a class="underlineHover" href="/AplicativoWebTemplate/forgotPassword.jsp">Forgot Password?</a>
