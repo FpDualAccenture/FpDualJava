@@ -1,6 +1,6 @@
-package edu.ejemplo.javaweb.servlet;
+package edu.ejemplo.javaweb.web.servlet;
 
-import edu.ejemplo.javaweb.servlet.dto.Usuario;
+import edu.ejemplo.javaweb.web.servlet.dto.Usuario;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

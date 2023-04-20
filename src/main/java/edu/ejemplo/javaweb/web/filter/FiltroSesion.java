@@ -1,4 +1,4 @@
-package edu.ejemplo.javaweb.filter;
+package edu.ejemplo.javaweb.web.filter;
 
 import javax.servlet.DispatcherType;
 import javax.servlet.Filter;

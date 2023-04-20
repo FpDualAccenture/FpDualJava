@@ -1,4 +1,4 @@
-package edu.ejemplo.javaweb.servlet.dto;
+package edu.ejemplo.javaweb.web.servlet.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
