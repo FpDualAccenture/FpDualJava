@@ -1,4 +1,4 @@
-package edu.fpdual.jdbc.ejemplojdbc.manager;
+package edu.fpdual.jdbc.ejemplojdbc.persistence.manager;
 
 import java.sql.Connection;
 import java.util.List;

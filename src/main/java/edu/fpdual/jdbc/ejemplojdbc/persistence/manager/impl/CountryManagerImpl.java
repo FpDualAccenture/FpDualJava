@@ -1,7 +1,7 @@
-package edu.fpdual.jdbc.ejemplojdbc.manager.impl;
+package edu.fpdual.jdbc.ejemplojdbc.persistence.manager.impl;
 
-import edu.fpdual.jdbc.ejemplojdbc.dao.Country;
-import edu.fpdual.jdbc.ejemplojdbc.manager.CountryManager;
+import edu.fpdual.jdbc.ejemplojdbc.persistence.dao.Country;
+import edu.fpdual.jdbc.ejemplojdbc.persistence.manager.CountryManager;
 
 import java.math.BigDecimal;
 import java.sql.Connection;

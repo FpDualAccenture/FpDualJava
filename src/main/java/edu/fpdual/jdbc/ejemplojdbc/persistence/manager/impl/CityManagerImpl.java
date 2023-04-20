@@ -1,8 +1,8 @@
-package edu.fpdual.jdbc.ejemplojdbc.manager.impl;
+package edu.fpdual.jdbc.ejemplojdbc.persistence.manager.impl;
 
-import edu.fpdual.jdbc.ejemplojdbc.dao.City;
-import edu.fpdual.jdbc.ejemplojdbc.dao.Country;
-import edu.fpdual.jdbc.ejemplojdbc.manager.CityManager;
+import edu.fpdual.jdbc.ejemplojdbc.persistence.dao.City;
+import edu.fpdual.jdbc.ejemplojdbc.persistence.dao.Country;
+import edu.fpdual.jdbc.ejemplojdbc.persistence.manager.CityManager;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

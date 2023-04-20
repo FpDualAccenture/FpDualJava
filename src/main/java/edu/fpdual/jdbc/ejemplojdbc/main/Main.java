@@ -1,13 +1,10 @@
 package edu.fpdual.jdbc.ejemplojdbc.main;
 
-import edu.fpdual.jdbc.ejemplojdbc.connector.MySQLConnector;
-import edu.fpdual.jdbc.ejemplojdbc.manager.impl.CityManagerImpl;
+import edu.fpdual.jdbc.ejemplojdbc.persistence.connector.MySQLConnector;
+import edu.fpdual.jdbc.ejemplojdbc.persistence.manager.impl.CityManagerImpl;
 
-import java.math.BigDecimal;
 import java.sql.Connection;
 import java.sql.SQLException;
-import java.util.List;
-
 
 public class Main {
 

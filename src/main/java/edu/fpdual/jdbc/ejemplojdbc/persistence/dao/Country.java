@@ -1,4 +1,4 @@
-package edu.fpdual.jdbc.ejemplojdbc.dao;
+package edu.fpdual.jdbc.ejemplojdbc.persistence.dao;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;

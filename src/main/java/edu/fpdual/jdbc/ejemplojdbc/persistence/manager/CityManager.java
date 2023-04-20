@@ -1,6 +1,5 @@
-package edu.fpdual.jdbc.ejemplojdbc.manager;
+package edu.fpdual.jdbc.ejemplojdbc.persistence.manager;
 
-import edu.fpdual.jdbc.ejemplojdbc.dao.City;
 
 import java.sql.Connection;
 import java.util.Set;
