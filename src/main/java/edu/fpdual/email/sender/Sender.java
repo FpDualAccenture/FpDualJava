@@ -1,5 +1,6 @@
-package edu.fpdual.email;
+package edu.fpdual.email.sender;
 
+import edu.fpdual.email.sender.enums.MailCredentialProperties;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -161,8 +162,8 @@ public class Sender {
     private Session createSession() {
         Session session = Session.getInstance(mailProp, new javax.mail.Authenticator() {
             protected PasswordAuthentication getPasswordAuthentication() {
-                return new PasswordAuthentication(credentialProp.getProperty(CredentialsConstants.USER),
-                        credentialProp.getProperty(CredentialsConstants.PASSWD));
+                return new PasswordAuthentication(credentialProp.getProperty(MailCredentialProperties.USER.getName()),
+                        credentialProp.getProperty(MailCredentialProperties.PASSWORD.getName()));
             }
         });
 

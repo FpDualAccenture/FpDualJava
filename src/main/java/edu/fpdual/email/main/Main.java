@@ -1,4 +1,6 @@
-package edu.fpdual.email;
+package edu.fpdual.email.main;
+
+import edu.fpdual.email.sender.Sender;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
