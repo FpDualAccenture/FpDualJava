@@ -11,7 +11,7 @@ import java.util.Date;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Creacion(version = "1.0", date = "03/05/2022")
+@Creacion(version = "1.0", date = "03/05/2022", author="Mariano")
 public class Jugador {
 
     private String nombre;

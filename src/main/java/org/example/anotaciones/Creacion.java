@@ -12,7 +12,7 @@ import java.lang.annotation.Target;
 @Documented
 public @interface Creacion {
 
-    String author() default "";
+    String author();
     String date() default "";
     String version() default "";
 

@@ -9,7 +9,7 @@ public class Main {
 
     public static void main(String[] args) throws NoSuchFieldException, NoSuchMethodException{
 
-        imprimirDatosAnotaciones();
+        //imprimirDatosAnotaciones();
         imprimitDatosPersona();
 
 
@@ -36,8 +36,8 @@ public class Main {
     }
 
     private static void imprimitDatosPersona() throws NoSuchFieldException, NoSuchMethodException {
-        Persona p = new Persona("Pablo");
-        p.setEdad(18);
+        Persona p = new Persona("Alejandro");
+        p.setEdad(20);
         p.setDireccion("Malaga");
         p.imprimir(" - ");
     }
