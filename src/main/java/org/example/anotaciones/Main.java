@@ -4,42 +4,59 @@ import org.reflections.Reflections;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.AnnotatedType;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
 
-    public static void main(String[] args) throws NoSuchFieldException, NoSuchMethodException{
+    public static void main(String[] args) {
+        print(5);
+        print("Hola");
+        print(58.69);
+        print(true);
 
-        //imprimirDatosAnotaciones();
-        imprimitDatosPersona();
+        System.out.println(sum(5,5));
+        System.out.println(sum(5,5.10));
 
+        NumeroNatural<Integer> numeroNaturalInteger = new NumeroNatural<>(5);
+        NumeroNatural<Double> numeroNaturalDouble = new NumeroNatural<>(5.5);
+        NumeroNatural<Byte> numeroNaturalByte = new NumeroNatural<>(Byte.valueOf("1"));
+        NumeroNatural<Byte> numeroNaturalByte2 = new NumeroNatural<>(Byte.valueOf("3"));
+        NumeroNatural<Short> numeroNaturalShort = new NumeroNatural<>(Short.valueOf("2"));
+
+        List<NumeroNatural<? extends Number>> listaNumeroNatural = new ArrayList<>();
+        listaNumeroNatural.add(numeroNaturalInteger);
+        listaNumeroNatural.add(numeroNaturalDouble);
+        listaNumeroNatural.add(numeroNaturalByte);
+        listaNumeroNatural.add(numeroNaturalByte2);
+        listaNumeroNatural.add(numeroNaturalShort);
+
+        listaNumeroNatural.forEach(System.out::println);
 
     }
 
-    private static void imprimirDatosAnotaciones() {
-        Jugador jugador = new Jugador();
-        //Para obtener todas las anotaciones de una clase;
-//        for(Annotation type : jugador.getClass().getAnnotations()){
-//            System.out.println(type.toString());
-//        }
+    public static <E> void print(E dato){
+        System.out.println("===== Generido del tipo: "+ dato.getClass()+" y tiene como valor: "+dato);
+    }
 
-        //Buscamos anotacion a nivel de clase
-        Annotation annotation = jugador.getClass().getAnnotation(Creacion.class);
-        System.out.println(annotation);
+    public static <E extends Number, U extends Number> Integer sum(E valor1, U valor2){
+        return  getRealValue(valor1).intValue()+getRealValue(valor2).intValue();
+    }
 
-        //Buscamos las clases que tengan asociada una anotación x.
-        Reflections ref = new Reflections("org.example.anotaciones");
-        for (Class<?> cl : ref.getTypesAnnotatedWith(Creacion.class)) {
-            Creacion creacion = cl.getAnnotation(Creacion.class);
-            System.out.printf("Found class: %s, with meta version: %s%n",
-                    cl.getSimpleName(), creacion.version());
+    private static <E extends Number> Number getRealValue(E valor){
+        if(valor instanceof Double){
+            return valor.doubleValue();
+        } else if(valor instanceof Integer){
+            return valor.intValue();
+        }else if(valor instanceof Float){
+            return valor.floatValue();
+        } else if(valor instanceof Long){
+            return valor.longValue();
+        } else if(valor instanceof Short){
+            return valor.shortValue();
+        } else {
+            return valor.byteValue();
         }
-    }
-
-    private static void imprimitDatosPersona() throws NoSuchFieldException, NoSuchMethodException {
-        Persona p = new Persona("Alejandro");
-        p.setEdad(20);
-        p.setDireccion("Malaga");
-        p.imprimir(" - ");
     }
 
 }
